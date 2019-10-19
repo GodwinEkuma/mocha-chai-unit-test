@@ -79,7 +79,7 @@ describe("UserController", function() {
     let res;
     let userService;
     beforeEach(() => {
-      req = { body: { id: faker.random.uuid() } };
+      req = { params: { id: faker.random.uuid() } };
       res = { json: function() {} };
       const userRepo = sinon.spy();
       userService = new UserService(userRepo);
@@ -87,7 +87,7 @@ describe("UserController", function() {
 
     it("should return a user that matches the id param", async function() {
       const stubValue = {
-        id: req.body.id,
+        id: req.params.id,
         name: faker.name.findName(),
         email: faker.internet.email(),
         createdAt: faker.date.past(),
