@@ -22,7 +22,7 @@ class UserController {
   }
 
   async getUser(req, res) {
-    const { id } = req.body;
+    const { id } = req.params;
 
     const user = await this.userService.getUser(id);
     return res.json({
