@@ -10,11 +10,11 @@ class UserModel extends Model {
           primaryKey: true,
           type: DataTypes.INTEGER
         },
-        firstName: {
+        name: {
           type: DataTypes.STRING,
           allowNull: false
         },
-        lastName: {
+        email: {
           type: DataTypes.STRING
         }
       },
