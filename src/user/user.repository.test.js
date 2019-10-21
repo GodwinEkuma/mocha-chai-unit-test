@@ -35,7 +35,7 @@ describe("UserRepository", function() {
     });
   });
 
-  describe("create", function() {
+  describe("getUser", function() {
     it("should retrieve a user with specific id", async function() {
       const stub = sinon.stub(UserModel, "findOne").returns(stubValue);
       const userRepository = new UserRepository();
